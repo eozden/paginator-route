@@ -1,0 +1,35 @@
+{
+    "name": "eozden/paginator-route",
+    "description": "Middleware for router {page} parameter to work with paginator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Enes Özden",
+            "email": "enes@emarka.com.tr"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "router",
+        "{page}",
+        "paginator"        
+    ],
+
+    "require": {},
+
+    "autoload": {
+        "psr-4": {
+          "Eozden\\PaginatorRoute\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eozden\\PaginatorRoute\\Tests\\": "tests"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.4"
+    }
+}

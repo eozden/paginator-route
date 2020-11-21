@@ -16,6 +16,7 @@ if your routes contains {page} route parameter, this middleware add this {page} 
 
 
 ## Installation
+
 Via Composer
 ```bash
 $ composer require eozden/paginator-route
@@ -31,11 +32,22 @@ Or you can manually update your require block and run `composer update` if you c
 
 ## Usage
 
+In App/Http/Kernel.php, add the paginator-route middleware.
 
+```php
+'api' => [
+    'throttle:60,1',
+    \Eozden\PaginatorRoute\Http\Middleware\PaginatorRoute::class
+],
+```
 
 ### Examples
 
 ```php
+# In your route file contains this route.
+Route::get('/users/list/{page}', 'UserController@list');
+
+# In your UserController file use as normal.
 public function list()
 {
     User::paginate(30);

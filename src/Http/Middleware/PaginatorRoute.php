@@ -11,7 +11,7 @@ class PaginatorRoute
         $page = $request->route('page');
 
         if(!is_null($page)) {
-            $request->merge('page', $page);
+            $request->merge(['page' => $page]);
         }
 
         return $next($request);
